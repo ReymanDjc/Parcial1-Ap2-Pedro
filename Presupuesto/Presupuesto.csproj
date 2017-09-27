@@ -73,6 +73,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="PresupuestoDbDataSet.xsc">
+      <DependentUpon>PresupuestoDbDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="PresupuestoDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PresupuestoDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="PresupuestoDbDataSet.xss">
+      <DependentUpon>PresupuestoDbDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,11 +104,17 @@
     <Content Include="Global.asax" />
     <Content Include="UI\Consultas\cPresupuestos.aspx" />
     <Content Include="UI\Registros\rPresupuestos.aspx" />
+    <Content Include="UI\Reportes\rPresupuestos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PresupuestoDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PresupuestoDbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -119,6 +136,13 @@
     <Compile Include="UI\Registros\rPresupuestos.aspx.designer.cs">
       <DependentUpon>rPresupuestos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\rPresupuestos.aspx.cs">
+      <DependentUpon>rPresupuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\rPresupuestos.aspx.designer.cs">
+      <DependentUpon>rPresupuestos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +161,9 @@
       <Project>{237fe59c-d899-4064-bbc4-742097bbf32c}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\Reportes\PresupuestosReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

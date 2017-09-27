@@ -9,7 +9,37 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="Container-fluid">
+            <div class="col-12">
+                <h1><strong>Consulta de Presupuestos</strong></h1>
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:DropDownList ID="PresupuestoDropDownList" runat="server">
+                                    <asp:ListItem>Todo</asp:ListItem>
+                                    <asp:ListItem>Fecha</asp:ListItem>
+                                    <asp:ListItem>Descripcion</asp:ListItem>
+                                    <asp:ListItem>Id</asp:ListItem>
+                                </asp:DropDownList>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="FiltrarTextBox" runat="server" class="form-control" Height="30"  Width="200"></asp:TextBox>
+                            </td>
+                            <td>
+                                &nbsp&nbsp<asp:Button ID="FiltrarButton" runat="server" class="btn btn-danger" Text="Filtrar" OnClick="FiltrarButton_Click" />
+                            </td>
+                            <td>
+                                <asp:Button ID="ImprimirButton" runat="server" class="btn btn-danger" Text="Imprimir" OnClick="ImprimirButton_Click" />
+                            </td>
+                        </tr>
+                    </table>  
+                </div>
+                <div>
+                    <asp:GridView ID="PresupuestoGridView" runat="server"></asp:GridView>
+                </div>
+
+            </div>
 
         </div>
     </form>

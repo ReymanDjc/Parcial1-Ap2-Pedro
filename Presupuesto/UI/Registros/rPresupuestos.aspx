@@ -26,7 +26,7 @@
                                <asp:TextBox ID="PresupuestoIdTextBox" runat="server" class="form-control" Height="30"  Width="100"></asp:TextBox>
                            </td>
                            <td>
-                               &nbsp&nbsp <asp:Button ID="BuscarButton" runat="server" class="btn btn-danger" Text="Buscar" />
+                               &nbsp&nbsp <asp:Button ID="BuscarButton" runat="server" class="btn btn-danger" Text="Buscar" OnClick="BuscarButton_Click" />
                            </td>
                        </tr>
 
@@ -47,16 +47,15 @@
                 
                 <div>
                 <br />
-                    <asp:Button ID="NuevoButton" runat="server" class="btn btn-danger" Text="Nuevo" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <asp:Button ID="NuevoButton" runat="server" class="btn btn-danger" Text="Nuevo" OnClick="NuevoButton_Click" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                     <asp:Button ID="GuardarButton" runat="server" class="btn btn-danger" Text="Guardar" OnClick="GuardarButton_Click" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <asp:Button ID="EliminarButton" runat="server" class="btn btn-danger" Text="Eliminar" />
-                    
+                    <asp:Button ID="EliminarButton" runat="server" class="btn btn-danger" Text="Eliminar" OnClick="EliminarButton_Click" />         
                 </div>
 
+                <asp:Panel CssClass="alert alert-success" ID="Panel1" runat="server">
+                    <asp:Label ID="Label5" runat="server" Text="Guardado"></asp:Label>
+                </asp:Panel>
             </div>
-
-
-
         </div>
     </form>
 </body>

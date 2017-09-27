@@ -13,7 +13,7 @@ namespace Presupuesto.UI.Registros
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
+			Panel1.Visible = false;
 		}
 
 		protected void GuardarButton_Click(object sender, EventArgs e)
@@ -24,16 +24,27 @@ namespace Presupuesto.UI.Registros
 			presupuesto = Llenar();
 			if (DescripcionTextBox.Text == DescripcionTextBox.Text)
 			{
-				if (id != presupuesto.PresupuestoId)
+				if (!string.IsNullOrEmpty(DescripcionTextBox.Text))
 				{
-					PresupuestoBLL.Modificar(presupuesto);
-					//MessageBox.Show("Presupuesto modificado con exito");
+					if (id != presupuesto.PresupuestoId)
+					{
+						PresupuestoBLL.Modificar(presupuesto);
+						Panel1.Visible = true;
+						//MessageBox.Show("Presupuesto modificado con exito");
+					}
+					else
+					{
+						PresupuestoBLL.Guardar(presupuesto);
+						Panel1.Visible = true;
+						//MessageBox.Show("Nuevo presupuesto agregado!");
+					}
 				}
 				else
 				{
-					PresupuestoBLL.Guardar(presupuesto);
-					//MessageBox.Show("Nuevo presupuesto agregado!");
+					Label5.Text = "llene los campos vacios";
+					Panel1.Visible = true;
 				}
+
 			}
 			else
 			{
@@ -57,8 +68,52 @@ namespace Presupuesto.UI.Registros
 
 		private void Limpiar()
 		{
-
+			PresupuestoIdTextBox.Text = "";
+			DescripcionTextBox.Text = "";
+			FechaTextBox.Text = "";
+			MontoTextBox.Text = "";
+			Panel1.Visible = false;
 		}
 
+		protected void NuevoButton_Click(object sender, EventArgs e)
+		{
+			Limpiar();
+		}
+
+		protected void EliminarButton_Click(object sender, EventArgs e)
+		{
+
+			int id = Utilidades.TOINT(PresupuestoIdTextBox.Text);
+
+			if (PresupuestoBLL.Eliminar(PresupuestoBLL.Buscar(p => p.PresupuestoId == id)))
+			{
+				Limpiar();
+				//MessageBox.Show("El Presupuesto se elimino con exito.");
+			}
+			else
+			{
+				//MessageBox.Show("El Presupuesto no se pudo eliminar.");
+			}
+		}
+
+		protected void BuscarButton_Click(object sender, EventArgs e)
+		{
+			int id = Utilidades.TOINT(PresupuestoIdTextBox.Text);
+			var presupuesto = new Presupuestos();
+
+			presupuesto = PresupuestoBLL.Buscar(p => p.PresupuestoId == id);
+
+			if (presupuesto != null)
+			{
+				DescripcionTextBox.Text = presupuesto.Descripcion;
+				MontoTextBox.Text = presupuesto.Monto.ToString();
+				FechaTextBox.Text = presupuesto.Fecha.ToString();
+			}
+			else
+			{
+				//MessageBox.Show("No existe.");
+				//Limpiar();
+			}
+		}
 	}
 }
