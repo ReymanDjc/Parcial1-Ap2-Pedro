@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.79427in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>2.10677in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>2.14062in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.30469in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -33,14 +33,13 @@
                             <TextRun>
                               <Value>Presupuesto Id</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -74,14 +73,13 @@
                             <TextRun>
                               <Value>Descripcion</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -115,14 +113,13 @@
                             <TextRun>
                               <Value>Fecha</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -156,14 +153,13 @@
                             <TextRun>
                               <Value>Monto</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -202,12 +198,14 @@
                             <TextRun>
                               <Value>=Fields!PresupuestoId.Value</Value>
                               <Style>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>PresupuestoId</rd:DefaultName>
@@ -235,12 +233,14 @@
                             <TextRun>
                               <Value>=Fields!Descripcion.Value</Value>
                               <Style>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Descripcion</rd:DefaultName>
@@ -268,12 +268,14 @@
                             <TextRun>
                               <Value>=Fields!Fecha.Value</Value>
                               <Style>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Fecha</rd:DefaultName>
@@ -301,12 +303,14 @@
                             <TextRun>
                               <Value>=Fields!Monto.Value</Value>
                               <Style>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Monto</rd:DefaultName>
@@ -347,20 +351,54 @@
         </TablixRowHierarchy>
         <DataSetName>PresupuestosDataSet</DataSetName>
         <Top>0.83333in</Top>
-        <Left>1.16667in</Left>
         <Height>0.5in</Height>
-        <Width>4in</Width>
+        <Width>7.34635in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Reporte de Presupuestos</Value>
+                <Style>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>0.21528in</Top>
+        <Left>2.13417in</Left>
+        <Height>0.36458in</Height>
+        <Width>3.58333in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>7.79167in</Width>
   <Page>
     <PageHeader>
       <Height>1in</Height>

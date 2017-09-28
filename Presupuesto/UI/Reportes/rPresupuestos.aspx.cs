@@ -11,6 +11,19 @@ namespace Presupuesto.UI.Reportes
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			this.ReportViewer1.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
+			this.ReportViewer1.Reset();
+
+
+			this.ReportViewer1.LocalReport.ReportPath = @"C:\Users\Reyman Djc\Desktop\Parcial Aplicada 1\Presupuesto\Presupuesto\UI\Reportes\PresupuestosReport.rdlc";
+			this.ReportViewer1.LocalReport.DataSources.Clear();
+
+
+
+			this.ReportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("PresupuestosDataSet", Consultas.cPresupuestos.Lista));
+
+			this.ReportViewer1.LocalReport.Refresh();
+
 
 		}
 	}

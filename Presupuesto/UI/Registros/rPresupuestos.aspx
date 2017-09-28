@@ -35,14 +35,17 @@
                 <div>
                     <strong><asp:Label ID="Label2" runat="server" Text="Fecha:"></asp:Label></strong>
                     <asp:TextBox ID="FechaTextBox" TextMode="Date" runat="server" class="form-control" Height="30"  Width="300"></asp:TextBox>
+<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Llenar Campos Vacios" ForeColor="Red" ControlToValidate="FechaTextBox">*</asp:RequiredFieldValidator>
                </div> 
                 <div>
                     <strong><asp:Label ID="Label3" runat="server" Text="Descripcion:"></asp:Label></strong>
                     <asp:TextBox ID="DescripcionTextBox" runat="server" class="form-control" Height="30"  Width="300"></asp:TextBox>
+<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Llenar Campos Vacios" ControlToValidate="DescripcionTextBox" ForeColor="Red">*</asp:RequiredFieldValidator>
                </div> 
                 <div>
                     <strong><asp:Label ID="Label4" runat="server" Text="Monto:"></asp:Label></strong>
                     <asp:TextBox ID="MontoTextBox" runat="server" class="form-control" Height="30"  Width="300"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Llenar Campos Vacios" ControlToValidate="MontoTextBox" ForeColor="Red">*</asp:RequiredFieldValidator>
                </div>
                 
                 <div>
@@ -52,11 +55,12 @@
                     <asp:Button ID="EliminarButton" runat="server" class="btn btn-danger" Text="Eliminar" OnClick="EliminarButton_Click" />         
                 </div>
 
-                <asp:Panel CssClass="alert alert-success" ID="Panel1" runat="server">
+                <%--<asp:Panel CssClass="alert alert-success" ID="Panel1" runat="server">
                     <asp:Label ID="Label5" runat="server" Text="Guardado"></asp:Label>
-                </asp:Panel>
+                </asp:Panel>--%>
             </div>
         </div>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" Height="50px" />
     </form>
 </body>
 </html>

@@ -58,6 +58,33 @@ namespace Presupuesto.UI.Consultas {
         protected global::System.Web.UI.WebControls.Button ImprimirButton;
         
         /// <summary>
+        /// FechaunoTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FechaunoTextBox;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// FechadosTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FechadosTextBox;
+        
+        /// <summary>
         /// PresupuestoGridView control.
         /// </summary>
         /// <remarks>

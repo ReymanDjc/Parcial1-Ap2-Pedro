@@ -13,7 +13,7 @@ namespace Presupuesto.UI.Registros
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			Panel1.Visible = false;
+			//Panel1.Visible = false;
 		}
 
 		protected void GuardarButton_Click(object sender, EventArgs e)
@@ -29,20 +29,20 @@ namespace Presupuesto.UI.Registros
 					if (id != presupuesto.PresupuestoId)
 					{
 						PresupuestoBLL.Modificar(presupuesto);
-						Panel1.Visible = true;
+						//Panel1.Visible = true;
 						//MessageBox.Show("Presupuesto modificado con exito");
 					}
 					else
 					{
 						PresupuestoBLL.Guardar(presupuesto);
-						Panel1.Visible = true;
+						//Panel1.Visible = true;
 						//MessageBox.Show("Nuevo presupuesto agregado!");
 					}
 				}
 				else
 				{
-					Label5.Text = "llene los campos vacios";
-					Panel1.Visible = true;
+					//Label5.Text = "llene los campos vacios";
+					//Panel1.Visible = true;
 				}
 
 			}
@@ -72,7 +72,7 @@ namespace Presupuesto.UI.Registros
 			DescripcionTextBox.Text = "";
 			FechaTextBox.Text = "";
 			MontoTextBox.Text = "";
-			Panel1.Visible = false;
+			//Panel1.Visible = false;
 		}
 
 		protected void NuevoButton_Click(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace Presupuesto.UI.Registros
 			else
 			{
 				//MessageBox.Show("No existe.");
-				//Limpiar();
+				Limpiar();
 			}
 		}
 	}

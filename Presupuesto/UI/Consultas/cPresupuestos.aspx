@@ -24,7 +24,7 @@
                                 </asp:DropDownList>
                             </td>
                             <td>
-                                <asp:TextBox ID="FiltrarTextBox" runat="server" class="form-control" Height="30"  Width="200"></asp:TextBox>
+                                <asp:TextBox ID="FiltrarTextBox" runat="server" class="form-control" Height="30"  Width="150"></asp:TextBox>
                             </td>
                             <td>
                                 &nbsp&nbsp<asp:Button ID="FiltrarButton" runat="server" class="btn btn-danger" Text="Filtrar" OnClick="FiltrarButton_Click" />
@@ -33,8 +33,26 @@
                                 <asp:Button ID="ImprimirButton" runat="server" class="btn btn-danger" Text="Imprimir" OnClick="ImprimirButton_Click" />
                             </td>
                         </tr>
+
                     </table>  
+                    <div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <asp:TextBox ID="FechaunoTextBox" TextMode="Date" runat="server" class="form-control" Height="25"  Width="175"></asp:TextBox> 
+                                </td>
+                                <td>
+                                    &nbsp<strong><asp:Label ID="Label1" runat="server" Text="-">  </asp:Label></strong>&nbsp
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="FechadosTextBox" TextMode="Date" runat="server" class="form-control" Height="25"  Width="175"></asp:TextBox>
+                                </td>
+                            </tr>
+                        </table>
+                         
+                    </div>
                 </div>
+
                 <div>
                     <asp:GridView ID="PresupuestoGridView" runat="server"></asp:GridView>
                 </div>
